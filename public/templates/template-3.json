@@ -1,0 +1,14 @@
+{
+  "id": "template-3",
+  "name": "Creative",
+  "layout": [
+    { "content": "", "x": 0, "y": 0, "width": 200, "height": 842, "fill": "#f79003", "opacity": 0.1, "type": "rect" },
+    { "field": "basics.name", "x": 220, "y": 60, "fontSize": 32, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#f79003", "type": "dynamic" },
+    { "field": "basics.title", "x": 220, "y": 100, "fontSize": 16, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+    { "content": "CONTACT", "x": 20, "y": 60, "fontSize": 12, "fontStyle": "bold", "fill": "#f79003", "type": "static" },
+    { "field": "basics.email", "x": 20, "y": 80, "fontSize": 10, "width": 160, "type": "dynamic" },
+    { "content": "SKILLS", "x": 20, "y": 150, "fontSize": 12, "fontStyle": "bold", "fill": "#f79003", "type": "static" },
+    { "field": "skills", "x": 20, "y": 170, "fontSize": 10, "width": 160, "type": "list", "format": "{name}" },
+    { "field": "basics.summary", "x": 220, "y": 140, "fontSize": 11, "width": 340, "type": "dynamic" }
+  ]
+}

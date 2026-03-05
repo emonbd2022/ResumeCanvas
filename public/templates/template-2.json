@@ -1,0 +1,12 @@
+{
+  "id": "template-2",
+  "name": "Executive",
+  "layout": [
+    { "field": "basics.name", "x": 200, "y": 50, "fontSize": 28, "fontFamily": "Times New Roman", "fontStyle": "bold", "align": "center", "width": 200, "type": "dynamic" },
+    { "field": "basics.title", "x": 200, "y": 85, "fontSize": 14, "fontFamily": "Times New Roman", "align": "center", "width": 200, "fill": "#555", "type": "dynamic" },
+    { "content": "________________________________________________________________________________", "x": 40, "y": 110, "fontSize": 10, "type": "static" },
+    { "field": "basics.summary", "x": 40, "y": 140, "fontSize": 11, "fontFamily": "Times New Roman", "width": 515, "type": "dynamic" },
+    { "content": "PROFESSIONAL EXPERIENCE", "x": 40, "y": 200, "fontSize": 14, "fontFamily": "Times New Roman", "fontStyle": "bold", "type": "static" },
+    { "field": "work", "x": 40, "y": 230, "fontSize": 11, "fontFamily": "Times New Roman", "width": 515, "type": "list", "format": "{company} | {position}\n{startDate} - {endDate}\n\n{summary}" }
+  ]
+}

@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+:root {
+  --accent: #f79003;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+.btn-primary {
+  @apply bg-[#f79003] hover:bg-[#d97c00] text-white font-bold py-2 px-4 rounded transition-colors duration-200 cursor-pointer;
+}
+
+.btn-secondary {
+  @apply bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200 cursor-pointer;
+}
+
+.btn-outline {
+  @apply border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-bold py-2 px-4 rounded transition-colors duration-200 cursor-pointer;
+}
+
+/* Canvas specific styles */
+.konvajs-content {
+  @apply shadow-lg rounded bg-white mx-auto;
+}

@@ -1,0 +1,13 @@
+{
+  "id": "template-1",
+  "name": "Modern Clean",
+  "layout": [
+    { "field": "basics.name", "x": 40, "y": 60, "fontSize": 24, "fontFamily": "Helvetica", "fontStyle": "bold", "fill": "#333", "type": "dynamic" },
+    { "field": "basics.title", "x": 40, "y": 90, "fontSize": 14, "fontFamily": "Helvetica", "fill": "#f79003", "type": "dynamic" },
+    { "field": "basics.email", "x": 40, "y": 110, "fontSize": 10, "fontFamily": "Helvetica", "fill": "#666", "type": "dynamic" },
+    { "content": "SUMMARY", "x": 40, "y": 150, "fontSize": 12, "fontFamily": "Helvetica", "fontStyle": "bold", "fill": "#333", "type": "static" },
+    { "field": "basics.summary", "x": 40, "y": 170, "fontSize": 10, "fontFamily": "Helvetica", "fill": "#444", "width": 500, "type": "dynamic" },
+    { "content": "EXPERIENCE", "x": 40, "y": 230, "fontSize": 12, "fontFamily": "Helvetica", "fontStyle": "bold", "fill": "#333", "type": "static" },
+    { "field": "work", "x": 40, "y": 250, "fontSize": 10, "fontFamily": "Helvetica", "fill": "#444", "width": 500, "type": "list", "format": "{position} at {company} ({startDate} - {endDate})\n{summary}" }
+  ]
+}

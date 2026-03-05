@@ -1,0 +1,12 @@
+{
+  "id": "template-4",
+  "name": "Minimalist",
+  "layout": [
+    { "field": "basics.name", "x": 40, "y": 40, "fontSize": 20, "fontFamily": "Courier New", "fontStyle": "bold", "fill": "#000", "type": "dynamic" },
+    { "field": "basics.title", "x": 40, "y": 65, "fontSize": 12, "fontFamily": "Courier New", "fill": "#666", "type": "dynamic" },
+    { "content": "--------------------------------------------------------", "x": 40, "y": 80, "fontSize": 10, "type": "static" },
+    { "field": "basics.summary", "x": 40, "y": 100, "fontSize": 10, "fontFamily": "Courier New", "width": 500, "type": "dynamic" },
+    { "content": "WORK", "x": 40, "y": 160, "fontSize": 12, "fontFamily": "Courier New", "fontStyle": "bold", "type": "static" },
+    { "field": "work", "x": 40, "y": 180, "fontSize": 10, "fontFamily": "Courier New", "width": 500, "type": "list", "format": "{company} // {position} // {startDate}-{endDate}\n{summary}" }
+  ]
+}

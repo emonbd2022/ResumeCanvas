@@ -1,0 +1,12 @@
+{
+  "id": "template-5",
+  "name": "Tech Dark",
+  "layout": [
+    { "content": "", "x": 0, "y": 0, "width": 595, "height": 842, "fill": "#1a1a1a", "type": "rect" },
+    { "field": "basics.name", "x": 40, "y": 60, "fontSize": 28, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#f79003", "type": "dynamic" },
+    { "field": "basics.title", "x": 40, "y": 95, "fontSize": 14, "fontFamily": "Arial", "fill": "#ccc", "type": "dynamic" },
+    { "field": "basics.summary", "x": 40, "y": 140, "fontSize": 10, "fontFamily": "Arial", "fill": "#aaa", "width": 500, "type": "dynamic" },
+    { "content": "EXPERIENCE", "x": 40, "y": 200, "fontSize": 12, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#f79003", "type": "static" },
+    { "field": "work", "x": 40, "y": 220, "fontSize": 10, "fontFamily": "Arial", "fill": "#ddd", "width": 500, "type": "list", "format": "{position} @ {company}\n{summary}" }
+  ]
+}
