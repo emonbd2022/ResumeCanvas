@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Stage, Layer, Text, Rect, Transformer } from 'react-konva';
+import { Stage, Layer, Text, Rect, Circle, Line, Transformer } from 'react-konva';
 
 const TransformerComponent = ({ selectedId }) => {
   const trRef = useRef();
@@ -60,13 +60,12 @@ export default function CanvasEditor({ items, setItems, stageRef }) {
 
   // Handle double click to edit
   const handleDoubleClick = (e, item) => {
+    if (item.type !== 'dynamic' && item.type !== 'static' && item.type !== 'list') return;
+    
     const textNode = e.target;
-    const stage = textNode.getStage();
     const textPosition = textNode.absolutePosition();
-    const stageContainer = stage.container();
     
     // Calculate position for the textarea overlay
-    // We need to account for the stage position relative to the viewport
     const areaPosition = {
       x: textPosition.x,
       y: textPosition.y,
@@ -103,6 +102,12 @@ export default function CanvasEditor({ items, setItems, stageRef }) {
             {items.map((item, i) => {
               if (item.type === 'rect') {
                  return <Rect key={item.id || i} {...item} />;
+              }
+              if (item.type === 'circle') {
+                 return <Circle key={item.id || i} {...item} />;
+              }
+              if (item.type === 'line') {
+                 return <Line key={item.id || i} {...item} />;
               }
               return (
                 <Text

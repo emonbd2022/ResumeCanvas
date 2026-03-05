@@ -1,12 +1,35 @@
 {
   "id": "template-2",
-  "name": "Executive",
+  "name": "Modern Black & White",
   "layout": [
-    { "field": "basics.name", "x": 200, "y": 50, "fontSize": 28, "fontFamily": "Times New Roman", "fontStyle": "bold", "align": "center", "width": 200, "type": "dynamic" },
-    { "field": "basics.title", "x": 200, "y": 85, "fontSize": 14, "fontFamily": "Times New Roman", "align": "center", "width": 200, "fill": "#555", "type": "dynamic" },
-    { "content": "________________________________________________________________________________", "x": 40, "y": 110, "fontSize": 10, "type": "static" },
-    { "field": "basics.summary", "x": 40, "y": 140, "fontSize": 11, "fontFamily": "Times New Roman", "width": 515, "type": "dynamic" },
-    { "content": "PROFESSIONAL EXPERIENCE", "x": 40, "y": 200, "fontSize": 14, "fontFamily": "Times New Roman", "fontStyle": "bold", "type": "static" },
-    { "field": "work", "x": 40, "y": 230, "fontSize": 11, "fontFamily": "Times New Roman", "width": 515, "type": "list", "format": "{company} | {position}\n{startDate} - {endDate}\n\n{summary}" }
+    { "type": "rect", "x": 0, "y": 0, "width": 220, "height": 842, "fill": "#000000" },
+    { "type": "rect", "x": 220, "y": 0, "width": 375, "height": 842, "fill": "#e5e5e5" },
+    { "type": "circle", "x": 110, "y": 100, "radius": 60, "fill": "#333" },
+
+    { "field": "basics.name", "x": 20, "y": 180, "width": 180, "fontSize": 22, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#ffffff", "align": "center", "type": "dynamic" },
+    { "field": "basics.title", "x": 20, "y": 210, "width": 180, "fontSize": 12, "fontFamily": "Arial", "fill": "#cccccc", "align": "center", "type": "dynamic" },
+
+    { "type": "rect", "x": 20, "y": 250, "width": 180, "height": 30, "fill": "#ffffff", "cornerRadius": 15 },
+    { "content": "CONTACT", "x": 20, "y": 258, "width": 180, "fontSize": 12, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#000000", "align": "center", "type": "static" },
+    
+    { "field": "basics.phone", "x": 20, "y": 300, "width": 180, "fontSize": 10, "fontFamily": "Arial", "fill": "#ffffff", "align": "center", "type": "dynamic" },
+    { "field": "basics.email", "x": 20, "y": 315, "width": 180, "fontSize": 10, "fontFamily": "Arial", "fill": "#ffffff", "align": "center", "type": "dynamic" },
+    { "field": "basics.location.city", "x": 20, "y": 330, "width": 180, "fontSize": 10, "fontFamily": "Arial", "fill": "#ffffff", "align": "center", "type": "dynamic" },
+
+    { "type": "rect", "x": 20, "y": 380, "width": 180, "height": 30, "fill": "#ffffff", "cornerRadius": 15 },
+    { "content": "SKILLS", "x": 20, "y": 388, "width": 180, "fontSize": 12, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#000000", "align": "center", "type": "static" },
+    { "field": "skills", "x": 20, "y": 430, "width": 180, "fontSize": 10, "fontFamily": "Arial", "fill": "#ffffff", "align": "center", "type": "list", "format": "• {name}" },
+
+    { "type": "rect", "x": 20, "y": 600, "width": 180, "height": 30, "fill": "#ffffff", "cornerRadius": 15 },
+    { "content": "EDUCATION", "x": 20, "y": 608, "width": 180, "fontSize": 12, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#000000", "align": "center", "type": "static" },
+    { "field": "education", "x": 20, "y": 650, "width": 180, "fontSize": 10, "fontFamily": "Arial", "fill": "#ffffff", "align": "center", "type": "list", "format": "{institution}\n{area}\n{startDate}-{endDate}" },
+
+    { "content": "PROFILE", "x": 250, "y": 60, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#000000", "type": "static" },
+    { "type": "line", "points": [250, 80, 550, 80], "stroke": "#000", "strokeWidth": 1 },
+    { "field": "basics.summary", "x": 250, "y": 100, "width": 300, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+
+    { "content": "WORK EXPERIENCE", "x": 250, "y": 200, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#000000", "type": "static" },
+    { "type": "line", "points": [250, 220, 550, 220], "stroke": "#000", "strokeWidth": 1 },
+    { "field": "work", "x": 250, "y": 240, "width": 300, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "■ {position}\n{company} / {startDate} - {endDate}\n\n{summary}" }
   ]
 }

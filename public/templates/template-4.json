@@ -1,12 +1,30 @@
 {
   "id": "template-4",
-  "name": "Minimalist",
+  "name": "Header Profile",
   "layout": [
-    { "field": "basics.name", "x": 40, "y": 40, "fontSize": 20, "fontFamily": "Courier New", "fontStyle": "bold", "fill": "#000", "type": "dynamic" },
-    { "field": "basics.title", "x": 40, "y": 65, "fontSize": 12, "fontFamily": "Courier New", "fill": "#666", "type": "dynamic" },
-    { "content": "--------------------------------------------------------", "x": 40, "y": 80, "fontSize": 10, "type": "static" },
-    { "field": "basics.summary", "x": 40, "y": 100, "fontSize": 10, "fontFamily": "Courier New", "width": 500, "type": "dynamic" },
-    { "content": "WORK", "x": 40, "y": 160, "fontSize": 12, "fontFamily": "Courier New", "fontStyle": "bold", "type": "static" },
-    { "field": "work", "x": 40, "y": 180, "fontSize": 10, "fontFamily": "Courier New", "width": 500, "type": "list", "format": "{company} // {position} // {startDate}-{endDate}\n{summary}" }
+    { "type": "rect", "x": 0, "y": 0, "width": 595, "height": 180, "fill": "#34495e" },
+    { "type": "rect", "x": 0, "y": 180, "width": 595, "height": 662, "fill": "#ecf0f1" },
+    
+    { "field": "basics.name", "x": 0, "y": 40, "width": 595, "fontSize": 32, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#ffffff", "align": "center", "type": "dynamic" },
+    { "field": "basics.title", "x": 0, "y": 80, "width": 595, "fontSize": 16, "fontFamily": "Arial", "fill": "#bdc3c7", "align": "center", "type": "dynamic" },
+
+    { "type": "circle", "x": 297, "y": 180, "radius": 70, "fill": "#fff", "stroke": "#ecf0f1", "strokeWidth": 5 },
+
+    { "type": "rect", "x": 20, "y": 200, "width": 555, "height": 40, "fill": "#ffffff", "cornerRadius": 5, "shadowBlur": 5, "shadowColor": "#ccc" },
+    { "field": "basics.email", "x": 40, "y": 215, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+    { "field": "basics.phone", "x": 200, "y": 215, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+    { "field": "basics.location.city", "x": 360, "y": 215, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+
+    { "content": "ABOUT ME", "x": 40, "y": 280, "fontSize": 16, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#34495e", "type": "static" },
+    { "field": "basics.summary", "x": 40, "y": 310, "width": 240, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+
+    { "content": "SKILLS", "x": 40, "y": 450, "fontSize": 16, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#34495e", "type": "static" },
+    { "field": "skills", "x": 40, "y": 480, "width": 240, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "• {name}" },
+
+    { "content": "EDUCATION", "x": 320, "y": 280, "fontSize": 16, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#34495e", "type": "static" },
+    { "field": "education", "x": 320, "y": 310, "width": 240, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "{startDate} - {endDate}\n{institution}\n{area}" },
+
+    { "content": "EXPERIENCE", "x": 320, "y": 450, "fontSize": 16, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#34495e", "type": "static" },
+    { "field": "work", "x": 320, "y": 480, "width": 240, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "{startDate} - {endDate}\n{position}\n{company}\n{summary}" }
   ]
 }

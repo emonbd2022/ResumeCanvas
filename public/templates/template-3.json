@@ -1,14 +1,35 @@
 {
   "id": "template-3",
-  "name": "Creative",
+  "name": "Geometric Red",
   "layout": [
-    { "content": "", "x": 0, "y": 0, "width": 200, "height": 842, "fill": "#f79003", "opacity": 0.1, "type": "rect" },
-    { "field": "basics.name", "x": 220, "y": 60, "fontSize": 32, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#f79003", "type": "dynamic" },
-    { "field": "basics.title", "x": 220, "y": 100, "fontSize": 16, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
-    { "content": "CONTACT", "x": 20, "y": 60, "fontSize": 12, "fontStyle": "bold", "fill": "#f79003", "type": "static" },
-    { "field": "basics.email", "x": 20, "y": 80, "fontSize": 10, "width": 160, "type": "dynamic" },
-    { "content": "SKILLS", "x": 20, "y": 150, "fontSize": 12, "fontStyle": "bold", "fill": "#f79003", "type": "static" },
-    { "field": "skills", "x": 20, "y": 170, "fontSize": 10, "width": 160, "type": "list", "format": "{name}" },
-    { "field": "basics.summary", "x": 220, "y": 140, "fontSize": 11, "width": 340, "type": "dynamic" }
+    { "type": "rect", "x": 0, "y": 0, "width": 595, "height": 180, "fill": "#2c3e50" },
+    { "type": "line", "points": [0, 180, 595, 120, 595, 0, 0, 0], "fill": "#e74c3c", "closed": true },
+    
+    { "type": "circle", "x": 100, "y": 100, "radius": 60, "fill": "#fff", "stroke": "#e74c3c", "strokeWidth": 4 },
+    
+    { "field": "basics.name", "x": 200, "y": 60, "fontSize": 32, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#ffffff", "type": "dynamic" },
+    { "field": "basics.title", "x": 200, "y": 100, "fontSize": 14, "fontFamily": "Arial", "fill": "#e74c3c", "type": "dynamic" },
+
+    { "content": "CONTACT", "x": 40, "y": 220, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#2c3e50", "type": "static" },
+    { "field": "basics.email", "x": 40, "y": 240, "width": 200, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+    { "field": "basics.phone", "x": 40, "y": 255, "width": 200, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+    { "field": "basics.location.city", "x": 40, "y": 270, "width": 200, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+
+    { "content": "SKILLS", "x": 40, "y": 320, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#2c3e50", "type": "static" },
+    { "field": "skills", "x": 40, "y": 340, "width": 200, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "• {name}" },
+
+    { "content": "ABOUT ME", "x": 280, "y": 220, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#2c3e50", "type": "static" },
+    { "field": "basics.summary", "x": 280, "y": 240, "width": 280, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "dynamic" },
+
+    { "content": "EDUCATION", "x": 280, "y": 350, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#2c3e50", "type": "static" },
+    { "type": "line", "points": [280, 370, 550, 370], "stroke": "#ccc", "strokeWidth": 1 },
+    { "field": "education", "x": 280, "y": 380, "width": 280, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "{startDate} - {endDate}\n{institution}\n{area}" },
+
+    { "content": "EXPERIENCE", "x": 280, "y": 500, "fontSize": 14, "fontFamily": "Arial", "fontStyle": "bold", "fill": "#2c3e50", "type": "static" },
+    { "type": "line", "points": [280, 520, 550, 520], "stroke": "#ccc", "strokeWidth": 1 },
+    { "field": "work", "x": 280, "y": 530, "width": 280, "fontSize": 10, "fontFamily": "Arial", "fill": "#333", "type": "list", "format": "{startDate} - {endDate}\n{position}\n{company}\n{summary}" },
+
+    { "type": "rect", "x": 0, "y": 800, "width": 595, "height": 42, "fill": "#2c3e50" },
+    { "type": "line", "points": [0, 800, 595, 750, 595, 842, 0, 842], "fill": "#e74c3c", "closed": true }
   ]
 }
