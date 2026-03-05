@@ -15,12 +15,21 @@ async function startServer() {
   app.post("/api/generate", async (req, res) => {
     const { answers } = req.body;
 
-    if (!process.env.GEMINI_API_KEY) {
+    let apiKey = process.env.GEMINI_API_KEY;
+
+    if (!apiKey) {
+      console.error("Error: GEMINI_API_KEY is missing in environment variables.");
       return res.status(500).json({ error: "Server configuration error: Missing API Key" });
     }
 
+    // Sanitize API Key (remove whitespace and quotes if present)
+    apiKey = apiKey.trim();
+    if (apiKey.startsWith('"') && apiKey.endsWith('"')) {
+      apiKey = apiKey.slice(1, -1);
+    }
+
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+      const ai = new GoogleGenAI({ apiKey });
       
       const schema = JSON.stringify({
         "basics": {
@@ -111,6 +120,13 @@ async function startServer() {
 
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
+    if (process.env.GEMINI_API_KEY) {
+      const key = process.env.GEMINI_API_KEY.trim();
+      const masked = key.substring(0, 4) + "..." + key.substring(key.length - 4);
+      console.log(`Gemini API Key detected: ${masked} (Length: ${key.length})`);
+    } else {
+      console.error("WARNING: No Gemini API Key detected in environment variables!");
+    }
   });
 }
 

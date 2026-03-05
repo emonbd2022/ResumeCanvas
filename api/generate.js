@@ -7,12 +7,20 @@ export default async function handler(req, res) {
 
   const { answers } = req.body;
 
-  if (!process.env.GEMINI_API_KEY) {
+  let apiKey = process.env.GEMINI_API_KEY;
+
+  if (!apiKey) {
     return res.status(500).json({ error: 'Server configuration error: Missing API Key' });
   }
 
+  // Sanitize API Key
+  apiKey = apiKey.trim();
+  if (apiKey.startsWith('"') && apiKey.endsWith('"')) {
+    apiKey = apiKey.slice(1, -1);
+  }
+
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    const ai = new GoogleGenAI({ apiKey });
     
     const schema = JSON.stringify({
       "basics": {
