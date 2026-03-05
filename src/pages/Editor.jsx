@@ -40,6 +40,10 @@ export default function Editor() {
       
       const data = await response.json();
       
+      if (!response.ok) {
+        throw new Error(data.details || data.error || 'Failed to generate resume');
+      }
+
       if (data.resume) {
         setResumeData(data.resume);
         
@@ -50,7 +54,7 @@ export default function Editor() {
         setStep('editor');
       }
     } catch (error) {
-      alert('Error generating resume. Please try again.');
+      alert(`Error: ${error.message}`);
       console.error(error);
     } finally {
       setIsLoading(false);
