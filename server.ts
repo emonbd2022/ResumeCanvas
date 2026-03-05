@@ -106,6 +106,40 @@ async function startServer() {
     }
   });
 
+  // API Route for Text Rewriting (AI)
+  app.post("/api/rewrite", async (req, res) => {
+    const { text, instruction } = req.body;
+    let apiKey = process.env.GEMINI_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "Server configuration error: Missing API Key" });
+    }
+    
+    // Sanitize
+    apiKey = apiKey.trim();
+    if (apiKey.startsWith('"') && apiKey.endsWith('"')) apiKey = apiKey.slice(1, -1);
+
+    try {
+      const ai = new GoogleGenAI({ apiKey });
+      const prompt = `
+        You are a professional resume editor.
+        TASK: Rewrite the following text based on this instruction: "${instruction || 'Make it more professional and concise'}".
+        ORIGINAL TEXT: "${text}"
+        RULES: 1. Return ONLY the rewritten text. 2. Do not add quotes.
+      `;
+
+      const result = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: prompt,
+      });
+      
+      res.json({ text: result.text.trim() });
+    } catch (error) {
+      console.error("Rewrite error:", error);
+      res.status(500).json({ error: "Failed to rewrite text" });
+    }
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
